@@ -309,13 +309,8 @@
             bottom:40px; left:15px; right:auto;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='60' y='35' width='25' height='25' rx='2' fill='none' stroke='%2306b6d4' stroke-width='2'/%3E%3Cpath d='M15 48 L25 43 L30 53 L35 43 L40 53 L45 43 L50 53 L55 43 L60 48' fill='none' stroke='%2306b6d4' stroke-width='2'/%3E%3Crect x='10' y='35' width='5' height='25' fill='%2306b6d4' opacity='0.3'/%3E%3Ccircle cx='50' cy='85' r='12' fill='none' stroke='%233b82f6' stroke-width='1.5'/%3E%3Ccircle cx='50' cy='85' r='3' fill='%233b82f6'/%3E%3Cellipse cx='50' cy='85' rx='12' ry='5' fill='none' stroke='%233b82f6' stroke-width='1' transform='rotate(45 50 85)'/%3E%3Cellipse cx='50' cy='85' rx='12' ry='5' fill='none' stroke='%233b82f6' stroke-width='1' transform='rotate(-45 50 85)'/%3E%3C/svg%3E");
         }
-        /* IN-PAGE FOOTER on every page */
-        .page::after {
-            content: '© 2026 · J. Pérez & D. Angarita · UTP · Física 3';
-            position: absolute; bottom:8px; left:0; right:0;
-            text-align:center; font-size:0.55rem; color:#c4c4c4;
-            font-family:'Fira Code'; letter-spacing:0.5px; pointer-events:none; z-index:1;
-        }
+        .back-idx{position:absolute;top:8px;right:12px;background:rgba(99,102,241,0.15);color:#6366f1;border:1px solid rgba(99,102,241,0.3);padding:3px 10px;border-radius:6px;font-size:0.6rem;cursor:pointer;z-index:2;font-family:'Fira Code';transition:0.2s;}
+        .back-idx:hover{background:#6366f1;color:white;}
     </style>
 </head>
 <body>
@@ -360,61 +355,55 @@
                 </div>
             </div>
 
-            <!-- Pág 1 (Derecha) -->
+            <!-- Pág 1 (Derecha) - ÍNDICE -->
             <div class="page" id="pg-1">
-                <h2>1. Conceptos Fundamentales</h2>
-                <div class="info-box">
-                    <h3>Movimiento Oscilatorio</h3>
-                    <p>Un móvil está animado de <strong>movimiento vibratorio u oscilatorio</strong> cuando se desplaza a uno y otro lado de una posición fija, siguiendo una ley determinada. El émbolo de una locomotora o el movimiento de un péndulo son ejemplos clásicos.</p>
+                <h2 style="text-align:center;margin-bottom:0.8rem;">📋 Índice</h2>
+                <div style="border:2px solid #e2e8f0;border-radius:10px;padding:1.2rem;background:#fefefe;">
+                    <table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+                        <tbody>
+                            <tr style="cursor:pointer;" onclick="goSpread(2)"><td style="padding:8px 4px;">📖</td><td style="padding:8px;"><strong>Conceptos y Hertz</strong></td><td style="padding:8px;text-align:right;color:var(--primary);font-family:'Fira Code';">3</td></tr>
+                            <tr style="background:#f8fafc;cursor:pointer;" onclick="goSpread(2)"><td style="padding:8px 4px;">🌊</td><td style="padding:8px;"><strong>M.A.S. y Relación con MCU</strong></td><td style="padding:8px;text-align:right;color:var(--primary);font-family:'Fira Code';">4</td></tr>
+                            <tr style="cursor:pointer;" onclick="goSpread(4)"><td style="padding:8px 4px;">📐</td><td style="padding:8px;"><strong>Cinemática del M.A.S.</strong></td><td style="padding:8px;text-align:right;color:var(--primary);font-family:'Fira Code';">5</td></tr>
+                            <tr style="background:#f8fafc;cursor:pointer;" onclick="goSpread(4)"><td style="padding:8px 4px;">🎬</td><td style="padding:8px;"><strong>Video + Valores Máximos</strong></td><td style="padding:8px;text-align:right;color:var(--primary);font-family:'Fira Code';">6</td></tr>
+                            <tr style="cursor:pointer;" onclick="goSpread(6)"><td style="padding:8px 4px;">✏️</td><td style="padding:8px;"><strong>Ejemplos Resueltos</strong></td><td style="padding:8px;text-align:right;color:var(--primary);font-family:'Fira Code';">7</td></tr>
+                            <tr style="background:#f8fafc;cursor:pointer;" onclick="goSpread(6)"><td style="padding:8px 4px;">🔬</td><td style="padding:8px;"><strong>Laboratorio Analítico</strong></td><td style="padding:8px;text-align:right;color:var(--primary);font-family:'Fira Code';">8</td></tr>
+                            <tr style="cursor:pointer;" onclick="goSpread(8)"><td style="padding:8px 4px;">📉</td><td style="padding:8px;"><strong>Movimiento Amortiguado</strong></td><td style="padding:8px;text-align:right;color:var(--primary);font-family:'Fira Code';">9</td></tr>
+                            <tr style="background:#f8fafc;cursor:pointer;" onclick="goSpread(8)"><td style="padding:8px 4px;">⚡</td><td style="padding:8px;"><strong>Energía en el M.A.S.</strong></td><td style="padding:8px;text-align:right;color:var(--primary);font-family:'Fira Code';">10</td></tr>
+                            <tr style="cursor:pointer;" onclick="goSpread(10)"><td style="padding:8px 4px;">🔗</td><td style="padding:8px;"><strong>Péndulo Simple</strong></td><td style="padding:8px;text-align:right;color:var(--primary);font-family:'Fira Code';">11</td></tr>
+                            <tr style="background:#f8fafc;cursor:pointer;" onclick="goSpread(10)"><td style="padding:8px 4px;">🔧</td><td style="padding:8px;"><strong>Resorte y Ley de Hooke</strong></td><td style="padding:8px;text-align:right;color:var(--primary);font-family:'Fira Code';">12</td></tr>
+                            <tr style="cursor:pointer;" onclick="goSpread(12)"><td style="padding:8px 4px;">📋</td><td style="padding:8px;"><strong>Tabla de Fórmulas</strong></td><td style="padding:8px;text-align:right;color:var(--primary);font-family:'Fira Code';">13</td></tr>
+                        </tbody>
+                    </table>
                 </div>
-                <p style="font-size:0.9rem;"><strong>Oscilación sencilla:</strong> Movimiento desde un extremo hasta el otro de la trayectoria.<br>
-                <strong>Oscilación completa:</strong> Ida y vuelta al punto de partida (un ciclo).<br>
-                <strong>Movimiento periódico:</strong> Se repite exactamente cada intervalo de tiempo determinado.</p>
-                
-                <div class="grid-2">
-                    <div style="background:#fff; padding:1rem; border:1px solid #e2e8f0; border-radius:6px;">
-                        <h4 style="color:var(--accent);">Período (T)</h4>
-                        <p style="font-size:0.85rem; margin-bottom:5px;">Tiempo para una oscilación completa.</p>
-                        <div class="formula" style="margin:0; padding:10px;">\( T = \dfrac{t}{n} \)</div>
-                    </div>
-                    <div style="background:#fff; padding:1rem; border:1px solid #e2e8f0; border-radius:6px;">
-                        <h4 style="color:var(--warning);">Frecuencia (f)</h4>
-                        <p style="font-size:0.85rem; margin-bottom:5px;">Oscilaciones por unidad de tiempo.</p>
-                        <div class="formula" style="margin:0; padding:10px;">\( f = \dfrac{n}{t} = \dfrac{1}{T} \)</div>
-                    </div>
+                <div style="text-align:right;margin-top:auto;padding-top:1rem;">
+                    <p style="font-size:0.7rem;color:#94a3b8;font-style:italic;">Edición Interactiva · 2026 · Física 3 · UTP</p>
                 </div>
-                <div class="info-box accent">
-                    <h3>Elongación (x) y Amplitud (A)</h3>
-                    <p><strong>Elongación:</strong> Distancia que separa a la partícula de la posición de equilibrio en un instante dado.<br>
-                    <strong>Amplitud:</strong> Máximo valor absoluto de la elongación (distancia máxima al centro).</p>
-                </div>
-                <p style="font-size:0.85rem; color:#64748b;">La unidad SI de frecuencia es el <strong style="color:var(--primary)">Hertz (Hz)</strong> = $1\,\text{s}^{-1}$. Otras: rpm, rad/s.</p>
             </div>
 
             <!-- ====== SPREAD 2 (HERTZ + MAS) ====== -->
-            <!-- Pág 2 (Izquierda) - HERTZ -->
+            <!-- Pág 2 (Izquierda) - CONCEPTOS + HERTZ -->
             <div class="page" id="pg-2">
-                <h2>2. Heinrich Rudolf Hertz</h2>
-                <div style="display:flex; gap:1rem; align-items:flex-start; margin-bottom:1rem;">
-                    <div style="min-width:120px; width:120px; height:150px; background: url('imgs/hertz.png') center/cover; border-radius:8px; border:2px solid #e2e8f0; box-shadow:0 4px 12px rgba(0,0,0,0.1);"></div>
-                    <div>
-                        <p style="font-size:0.95rem; margin-bottom:0.5rem;"><strong>Heinrich Rudolf Hertz</strong> (1857 – 1894) fue un físico alemán pionero en el estudio de la radiación electromagnética.</p>
-                        <p style="font-size:0.85rem; color:var(--text-muted);">Demostró experimentalmente la existencia de las ondas electromagnéticas predichas por Maxwell, sentando las bases de la radio, la televisión y las telecomunicaciones modernas.</p>
+                <h2>1. Conceptos y Hertz</h2>
+                <div class="info-box">
+                    <h3>Movimiento Oscilatorio</h3>
+                    <p>Un móvil tiene <strong>movimiento oscilatorio</strong> cuando se desplaza a uno y otro lado de una posición fija. Ejemplos: péndulos, resortes, cuerdas de guitarra.</p>
+                </div>
+                <div class="grid-2">
+                    <div style="background:#fff; padding:0.8rem; border:1px solid #e2e8f0; border-radius:6px;">
+                        <h4 style="color:var(--accent);font-size:0.9rem;">Período (T)</h4>
+                        <div class="formula" style="margin:0; padding:8px;">\( T = \dfrac{t}{n} \)</div>
+                    </div>
+                    <div style="background:#fff; padding:0.8rem; border:1px solid #e2e8f0; border-radius:6px;">
+                        <h4 style="color:var(--warning);font-size:0.9rem;">Frecuencia (f)</h4>
+                        <div class="formula" style="margin:0; padding:8px;">\( f = \dfrac{1}{T} \)</div>
                     </div>
                 </div>
-                <div class="info-box" style="border-left-color:var(--secondary); background:#faf5ff;">
-                    <h3 style="color:var(--secondary);">¿Por qué "Hertz"?</h3>
-                    <p style="font-size:0.9rem;">En 1930, la Comisión Electrotécnica Internacional nombró la unidad de frecuencia en su honor. <strong>1 Hz = 1 ciclo por segundo</strong> ($1\,\text{Hz} = 1\,\text{s}^{-1}$).</p>
-                </div>
-                <div class="info-box accent">
-                    <h3>Contribuciones Clave</h3>
-                    <p style="font-size:0.85rem;">• Generó y detectó ondas electromagnéticas en laboratorio (1887)<br>
-                    • Demostró que las ondas EM se propagan a la velocidad de la luz<br>
-                    • Descubrió el efecto fotoeléctrico (luego explicado por Einstein)<br>
-                    • Sus experimentos con chispas confirmaron las ecuaciones de Maxwell</p>
-                </div>
-                <div class="formula">
-                    \( f\,(\text{Hz}) = \dfrac{\text{ciclos completados}}{\text{tiempo en segundos}} = \dfrac{1}{T} \)
+                <div style="display:flex; gap:0.8rem; align-items:flex-start; margin-top:0.8rem;">
+                    <div style="min-width:80px; width:80px; height:100px; background: url('imgs/hertz.png') center/cover; border-radius:8px; border:2px solid #e2e8f0;"></div>
+                    <div>
+                        <p style="font-size:0.85rem;"><strong>Heinrich R. Hertz</strong> (1857–1894) demostró las ondas electromagnéticas. La unidad <strong style="color:var(--primary)">Hz</strong> = $1\,s^{-1}$ lleva su nombre.</p>
+                        <p style="font-size:0.8rem;color:#64748b;">• Generó ondas EM en laboratorio (1887)<br>• Descubrió el efecto fotoeléctrico</p>
+                    </div>
                 </div>
             </div>
 
@@ -438,6 +427,7 @@
                     <canvas id="mcuCanvas"></canvas>
                 </div>
                 <p style="font-size:0.8rem; text-align:center; color:#64748b;">(Partícula cyan → MCU · Proyección morada → MAS)</p>
+                <img src="imgs/MAS.png" alt="Movimiento Armónico Simple" style="width:100%;border-radius:8px;margin-top:0.5rem;border:1px solid #e2e8f0;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
             </div>
 
             <!-- ====== SPREAD 3 (CINEMÁTICA) ====== -->
@@ -642,6 +632,7 @@
                     <div class="formula" style="padding:10px;">\[ f_0 = \frac{1}{2\pi}\sqrt{\frac{k}{m}} \qquad \omega_0 = \sqrt{\frac{k}{m}} \]</div>
                     <p style="font-size:0.85rem;">La frecuencia natural es aquella a la que el sistema oscila libremente.</p>
                 </div>
+                <img src="imgs/MASA RESORTE.png" alt="Sistema Masa-Resorte" style="width:100%;border-radius:8px;margin-top:0.8rem;border:1px solid #e2e8f0;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
             </div>
 
             <!-- ====== SPREAD 7 (RESUMEN Y FINAL) ====== -->
@@ -697,40 +688,82 @@
         <button class="btn-nav" id="btn-next" onclick="turnSpread(1)">Siguiente &#8594;</button>
     </div>
 
-    <!-- INDEX BAR -->
-    <div class="index-bar" id="index-bar">
-        <button class="idx-btn active" onclick="goSpread(0)">📖 Portada</button>
-        <button class="idx-btn" onclick="goSpread(2)">👨‍🔬 Hertz</button>
-        <button class="idx-btn" onclick="goSpread(4)">📐 Cinemática</button>
-        <button class="idx-btn" onclick="goSpread(6)">✏️ Ejemplos</button>
-        <button class="idx-btn" onclick="goSpread(8)">⚡ Energía</button>
-        <button class="idx-btn" onclick="goSpread(10)">🔗 Péndulo</button>
-        <button class="idx-btn" onclick="goSpread(12)">📋 Fórmulas</button>
+    <!-- FLOATING QR BUTTON (bottom-left, like chatbot) -->
+    <div id="qr-btn" onclick="toggleQR()" style="position:fixed;bottom:30px;left:30px;width:56px;height:56px;border-radius:50%;display:flex;justify-content:center;align-items:center;cursor:pointer;box-shadow:0 8px 25px rgba(16,185,129,0.5);z-index:1001;border:none;background:linear-gradient(135deg,#10b981,#06b6d4);font-size:1.5rem;transition:transform 0.2s;animation:qrPulse 2s infinite;">
+        📱
     </div>
+    <div id="qr-panel" style="position:fixed;bottom:100px;left:30px;background:#18181b;border:1px solid #27272a;border-radius:16px;box-shadow:0 16px 40px rgba(0,0,0,0.5);z-index:1000;display:none;padding:16px;align-items:center;gap:14px;">
+        <canvas id="qr-code" width="110" height="110" style="border:2px solid #27272a;border-radius:10px;"></canvas>
+        <div>
+            <p style="font-size:0.8rem;color:#e4e4e7;font-weight:700;margin-bottom:4px;">📲 Escanea el QR</p>
+            <p style="font-size:0.65rem;color:#71717a;line-height:1.4;">Abre este cuaderno<br>interactivo en tu<br>dispositivo móvil</p>
+        </div>
+    </div>
+    <style>
+        @keyframes qrPulse{0%,100%{box-shadow:0 8px 25px rgba(16,185,129,0.5)}50%{box-shadow:0 8px 35px rgba(16,185,129,0.8),0 0 60px rgba(6,182,212,0.3)}}
+        #qr-btn:hover{transform:scale(1.1);animation:none;box-shadow:0 8px 35px rgba(16,185,129,0.8);}
+    </style>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-        <strong>© 2026 — Todos los derechos reservados</strong><br>
-        Juan José Pérez &amp; Deisy Patricia Angarita<br>
-        Universidad Tecnológica de Pereira · Física 3 · Clase N°3<br>
-        <span style="color:#3f3f46;">Movimiento Oscilatorio · Edición Interactiva</span>
-    </footer>
-    <!-- CHATBOT WIDGET (HERTZ) -->
-    <div id="chatbot-btn" onclick="toggleChat()" style="position:fixed;bottom:30px;right:30px;width:60px;height:60px;border-radius:50%;display:flex;justify-content:center;align-items:center;cursor:pointer;box-shadow:0 8px 25px rgba(139,92,246,0.5);z-index:1001;border:3px solid var(--secondary);overflow:hidden;">
-        <img src="imgs/hertz.png" alt="Hertz" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='👨‍🔬'">
-    </div>
-    <div id="chatbot-window" style="position:fixed;bottom:100px;right:30px;width:370px;height:500px;background:#18181b;border:1px solid #27272a;border-radius:16px;box-shadow:0 20px 40px rgba(0,0,0,0.6);z-index:1000;display:none;flex-direction:column;overflow:hidden;">
-        <div style="padding:14px 18px;background:linear-gradient(135deg,#1a1a2e,#111);border-bottom:1px solid #27272a;font-weight:700;color:#fff;display:flex;align-items:center;gap:10px;">
-            <div style="width:32px;height:32px;border-radius:50%;overflow:hidden;border:2px solid var(--secondary);flex-shrink:0;"><img src="imgs/hertz.png" alt="H" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='👨‍🔬'"></div>
-            <div><span style="font-size:0.95rem;">Prof. Hertz</span><br><span style="font-size:0.65rem;color:#71717a;font-weight:400;">Asistente de Física</span></div>
-            <span onclick="toggleChat()" style="margin-left:auto;cursor:pointer;color:#71717a;font-size:1.3rem;">&times;</span>
-        </div>
-        <div id="chat-msgs" style="flex:1;padding:16px;overflow-y:auto;display:flex;flex-direction:column;gap:10px;"></div>
-        <div style="display:flex;padding:12px;border-top:1px solid #27272a;background:#111;">
-            <input id="chat-input" type="text" placeholder="Pregunta sobre M.A.S, fricción..." style="flex:1;background:#27272a;border:1px solid #3f3f46;color:white;padding:10px 14px;border-radius:20px;outline:none;font-family:Inter;" onkeydown="if(event.key==='Enter')sendChat()">
-            <button onclick="sendChat()" style="background:var(--primary);color:white;border:none;padding:8px 14px;border-radius:20px;margin-left:8px;cursor:pointer;font-weight:600;">▶</button>
+    <!-- STICKY BOTTOM BAR -->
+    <div style="position:fixed;bottom:0;left:0;right:0;background:linear-gradient(180deg,transparent,#0a0a0f 30%);padding:18px 0 8px;z-index:999;pointer-events:none;">
+        <div style="text-align:center;pointer-events:auto;">
+            <span style="font-size:0.6rem;color:#52525b;font-family:'Fira Code';letter-spacing:0.5px;">© 2026 • Juan José Pérez &amp; Deisy Patricia Angarita • UTP • Física 3 • Todos los derechos reservados</span>
         </div>
     </div>
+    <!-- FLOATING QUOTE TOOLTIP -->
+    <div id="float-quote" style="position:fixed;bottom:95px;right:30px;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:white;padding:10px 16px;border-radius:12px 12px 4px 12px;font-size:0.75rem;font-style:italic;max-width:260px;box-shadow:0 6px 20px rgba(99,102,241,0.4);z-index:1002;opacity:0;transform:translateY(10px);transition:opacity 0.4s,transform 0.4s;pointer-events:none;line-height:1.4;"></div>
+
+    <!-- CHATBOT WIDGET -->
+    <div id="chatbot-btn" onclick="toggleChat()" style="position:fixed;bottom:30px;right:30px;width:60px;height:60px;border-radius:50%;display:flex;justify-content:center;align-items:center;cursor:pointer;box-shadow:0 8px 25px rgba(99,102,241,0.5);z-index:1001;border:none;overflow:hidden;background:linear-gradient(135deg,#6366f1,#8b5cf6);font-size:1.8rem;transition:transform 0.2s;">
+        <span id="chat-btn-face">🧑‍🔬</span>
+    </div>
+    <div id="chatbot-window" style="position:fixed;bottom:100px;right:30px;width:400px;height:560px;background:#fff;border:1px solid #e2e8f0;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.15);z-index:1000;display:none;flex-direction:column;overflow:hidden;">
+        <!-- HEADER -->
+        <div style="padding:14px 18px;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;display:flex;align-items:center;gap:12px;">
+            <div id="chat-avatar" style="width:44px;height:44px;border-radius:50%;border:2px solid rgba(255,255,255,0.5);background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:1.6rem;"><span id="chat-face">🧑‍🔬</span></div>
+            <div style="flex:1;">
+                <div id="chat-name" style="font-weight:700;font-size:1rem;">Heinrich Hertz</div>
+                <div style="font-size:0.7rem;opacity:0.85;display:flex;align-items:center;gap:4px;"><span style="width:6px;height:6px;background:#4ade80;border-radius:50%;display:inline-block;"></span> Asistente de Física y Matemáticas IA</div>
+            </div>
+            <div style="display:flex;gap:6px;">
+                <span onclick="toggleChat()" style="cursor:pointer;font-size:1.2rem;opacity:0.8;">&times;</span>
+            </div>
+        </div>
+        <!-- SCIENTIST GRID -->
+        <div style="padding:12px 16px;border-bottom:1px solid #f1f5f9;background:#fafafe;">
+            <p style="text-align:center;font-size:0.65rem;text-transform:uppercase;letter-spacing:2px;color:#94a3b8;margin-bottom:8px;font-weight:600;">Elige tu Mentor Científico</p>
+            <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;">
+                <div class="sci-card active" onclick="setSci(0)"><div class="sci-face">👨‍🔬</div><span>Hertz</span></div>
+                <div class="sci-card" onclick="setSci(1)"><div class="sci-face">🧑‍⚖️</div><span>Newton</span></div>
+                <div class="sci-card" onclick="setSci(2)"><div class="sci-face">👨‍🏫</div><span>Einstein</span></div>
+                <div class="sci-card" onclick="setSci(3)"><div class="sci-face">🔬</div><span>Hooke</span></div>
+                <div class="sci-card" onclick="setSci(4)"><div class="sci-face">🧔</div><span>Galileo</span></div>
+            </div>
+        </div>
+        <!-- API KEY BAR -->
+        <div style="padding:6px 16px;border-bottom:1px solid #f1f5f9;display:flex;gap:6px;align-items:center;background:#fefefe;">
+            <input id="api-key" type="password" placeholder="🔑 Ingresa tu Gemini API Key..." style="flex:1;background:#f1f5f9;border:1px solid #e2e8f0;color:#334155;padding:6px 10px;border-radius:8px;font-size:0.7rem;outline:none;font-family:'Fira Code';">
+            <span id="api-status" style="font-size:0.6rem;color:#94a3b8;">offline</span>
+        </div>
+        <!-- MESSAGES -->
+        <div id="chat-msgs" style="flex:1;padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;background:#fafafe;"></div>
+        <!-- INPUT -->
+        <div style="display:flex;padding:10px 14px;border-top:1px solid #f1f5f9;background:#fff;gap:8px;">
+            <input id="chat-input" type="text" placeholder="Escribe tu pregunta..." style="flex:1;background:#f1f5f9;border:1px solid #e2e8f0;color:#334155;padding:8px 14px;border-radius:20px;outline:none;font-family:Inter;font-size:0.85rem;" onkeydown="if(event.key==='Enter')sendChat()">
+            <button onclick="sendChat()" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);color:white;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-weight:600;font-size:0.9rem;">▶</button>
+        </div>
+    </div>
+    <style>
+        .sci-card{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 2px;border-radius:10px;cursor:pointer;border:2px solid transparent;transition:0.2s;}
+        .sci-card:hover{background:#f1f5f9;}
+        .sci-card.active{border-color:#6366f1;background:#eef2ff;}
+        .sci-face{width:36px;height:36px;border-radius:50%;background:#f1f5f9;display:flex;align-items:center;justify-content:center;font-size:1.2rem;}
+        .sci-card.active .sci-face{background:#e0e7ff;}
+        .sci-card span{font-size:0.6rem;color:#64748b;font-weight:500;}
+        .sci-card.active span{color:#6366f1;font-weight:700;}
+        .sci-btn{display:none;}
+        #chatbot-btn:hover{transform:scale(1.1);}
+    </style>
 
     <!-- ENGINE SCRIPTS -->
     <script>
@@ -742,6 +775,16 @@
             wrap.innerHTML = '<div class="spiral-hole left"></div><div class="spiral-coil"></div><div class="spiral-hole right"></div>';
             cont.appendChild(wrap);
         }
+
+        // --- Add "Volver al Índice" button on every page except portada & index ---
+        document.querySelectorAll('.page').forEach((pg,i) => {
+            if(i <= 1) return; // skip portada and index
+            let btn = document.createElement('button');
+            btn.className = 'back-idx';
+            btn.textContent = '📋 Índice';
+            btn.onclick = () => goSpread(0);
+            pg.appendChild(btn);
+        });
 
         // --- 2. Paginación ---
         const totalPages = 14;
@@ -757,10 +800,6 @@
             document.getElementById('pg-indicator').innerText = `Páginas ${currentSpread+1} - ${currentSpread+2} de ${totalPages}`;
             document.getElementById('btn-prev').disabled = currentSpread===0;
             document.getElementById('btn-next').disabled = currentSpread>=totalPages-2;
-            // Update index bar highlight
-            document.querySelectorAll('.idx-btn').forEach((b,i)=>{
-                b.classList.toggle('active', i*2===currentSpread);
-            });
             setTimeout(()=>{
                 try {
                     if(window.MathJax && MathJax.typesetPromise) {
@@ -784,6 +823,7 @@
 
         // --- 3. GUI Utils ---
         window.updVal=(id,v,s)=>{document.getElementById('v_'+id).innerText=v+(s?' '+s:'');};
+        window.toggleQR=()=>{let p=document.getElementById('qr-panel');p.style.display=p.style.display==='flex'?'none':'flex';};
         window.fricCheck=(isS)=>{
             let ve=parseFloat(document.getElementById('i_fe').value),vc=parseFloat(document.getElementById('i_fc').value);
             if(isS&&vc>=ve){document.getElementById('i_fc').value=(ve-0.05).toFixed(2);}
@@ -988,57 +1028,181 @@
         }
         requestAnimationFrame(engine);
 
-        // --- 5. CHATBOT INTELIGENTE (100% client-side) ---
+        // --- 5. CHATBOT CON PERSONALIDAD + GEMINI API ---
+        const SCIENTISTS = [
+          {name:'Prof. Hertz',face:'👨‍🔬',emoji:'⚡',
+           quotes:['«Las ondas electromagnéticas existen, y yo las demostré.»','«La naturaleza habla en frecuencias.»','«Nada se pierde, todo vibra.»','«Las chispas revelaron el secreto del éter.»'],
+           greeting:'¡Guten Tag! Soy Heinrich Hertz. Mis experimentos demostraron que las ondas EM son reales. ¡Pregunta lo que quieras! ⚡',
+           system:'Eres Heinrich Hertz (1857-1894), físico alemán. Habla con autoridad sobre ondas y frecuencias. Usa ocasionalmente palabras en alemán (Wunderbar, Ja, Natürlich). Menciona tus experimentos con chispas.'},
+          {name:'Sir Newton',face:'🧑‍⚖️',emoji:'🍎',
+           quotes:['«Si he visto más lejos es porque estoy sobre hombros de gigantes.»','«Lo que sabemos es una gota; lo que ignoramos, un océano.»','«A toda acción le corresponde una reacción igual y opuesta.»','«El tacto es el arte de hacer un punto sin hacer un enemigo.»'],
+           greeting:'¡Saludos distinguidos! Soy Sir Isaac Newton. Las leyes del movimiento llevan mi nombre. Preguntadme. 🍎',
+           system:'Eres Isaac Newton (1643-1727). Habla con tono formal y aristocrático. Menciona tus Principia Mathematica. Relaciona todo con tus 3 leyes. Te molesta Leibniz.'},
+          {name:'Einstein',face:'👨‍🏫',emoji:'🧠',
+           quotes:['«La imaginación es más importante que el conocimiento.»','«Dios no juega a los dados con el universo.»','«Si no puedes explicarlo con sencillez, no lo entiendes.»','«La locura es hacer lo mismo esperando resultados diferentes.»','«La energía no se crea ni se destruye, solo se transforma.»'],
+           greeting:'¡Hola! Soy Albert Einstein. No hay preguntas tontas, solo respuestas que aún no encontramos. 🧠',
+           system:'Eres Albert Einstein (1879-1955). Habla con humor, usa analogías simples. Di "Gott würfelt nicht" ocasionalmente. Eres humilde pero brillante.'},
+          {name:'Robert Hooke',face:'🔬',emoji:'🔧',
+           quotes:['«Ut tensio, sic vis — como la extensión, así la fuerza.»','«La naturaleza es el mejor mecánico.»','«Todo cuerpo elástico tiende a su forma original.»','«El microscopio revela mundos invisibles.»'],
+           greeting:'¡Saludos! Soy Robert Hooke. Mi ley F=-kx es la base de todo oscilador. 🔧',
+           system:'Eres Robert Hooke (1635-1703). Resentido porque Newton te opacó. Orgulloso de F=-kx. Meticuloso y detallista.'},
+          {name:'Galileo',face:'🧔',emoji:'🔭',
+           quotes:['«Y sin embargo, se mueve.»','«Mide lo que se pueda medir, y lo que no, hazlo medible.»','«La matemática es el lenguaje con que Dios escribió el universo.»','«La duda es la madre del descubrimiento.»'],
+           greeting:'¡Buongiorno! Sono Galileo Galilei. Fui el primero en estudiar el péndulo en la catedral de Pisa. 🔭',
+           system:'Eres Galileo Galilei (1564-1642). Usa italiano ocasional (Bene, Allora, Magnifico). Mencionas el péndulo en Pisa. Rebelde contra el dogma.'}
+        ];
+        let currentSci = 0;
+        let quoteInterval = null;
+        let floatQuoteInterval = null;
+        function startQuoteRotation(){
+            if(quoteInterval) clearInterval(quoteInterval);
+            if(floatQuoteInterval) clearInterval(floatQuoteInterval);
+            let idx=0;
+            // Floating quote tooltip from bubble
+            function showFloatQuote(){
+                let sci=SCIENTISTS[currentSci];
+                idx=(idx+1)%sci.quotes.length;
+                let el=document.getElementById('float-quote');
+                let chatWin=document.getElementById('chatbot-window');
+                if(chatWin.style.display==='flex') return; // don't show if chat is open
+                el.textContent=sci.face+' '+sci.quotes[idx];
+                el.style.opacity='1';el.style.transform='translateY(0)';
+                setTimeout(()=>{el.style.opacity='0';el.style.transform='translateY(10px)';},4000);
+            }
+            floatQuoteInterval = setInterval(showFloatQuote,6000);
+            setTimeout(showFloatQuote,2000); // show first one quickly
+        }
+        startQuoteRotation();
         const KB = [
-          {k:['oscilat','vibratori','movimiento oscilatorio','que es oscil'],r:'El movimiento oscilatorio es aquel en que un cuerpo se desplaza a uno y otro lado de una posición de equilibrio. Puede ser sencillo (un extremo al otro) o completo (ida y vuelta). Ejemplos: péndulos, resortes, cuerdas de guitarra.'},
-          {k:['mas','m.a.s','armonico simple','armónico simple'],r:'El M.A.S. (Movimiento Armónico Simple) es un movimiento oscilatorio, periódico y de amplitud constante. Su ecuación es x(t) = A·sin(ωt + α), donde A es la amplitud, ω la frecuencia angular y α la fase inicial.'},
-          {k:['periodo','período','period'],r:'El Período (T) es el tiempo que tarda una oscilación completa. T = 2π/ω. Para un resorte: T = 2π√(m/k). Para un péndulo: T = 2π√(L/g). Se mide en segundos (s).'},
-          {k:['frecuencia','hertz','hz'],r:'La Frecuencia (f) es el número de oscilaciones por segundo. f = 1/T = ω/(2π). Se mide en Hertz (Hz). Heinrich Hertz demostró experimentalmente las ondas electromagnéticas en 1887.'},
-          {k:['omega','frecuencia angular','angular'],r:'La frecuencia angular ω = 2πf = 2π/T. Para resorte: ω = √(k/m). Para péndulo: ω = √(g/L). Se mide en rad/s.'},
-          {k:['amplitud'],r:'La Amplitud (A) es la distancia máxima desde la posición de equilibrio. Es el valor máximo de la elongación. La energía total es proporcional a A²: E = ½kA².'},
-          {k:['elongacion','elongación','posicion','posición','x(t)'],r:'La elongación x es la distancia instantánea al punto de equilibrio. x(t) = A·sin(ωt + α). Varía entre -A y +A. En el equilibrio x=0, en los extremos x=±A.'},
-          {k:['velocidad','v(t)','vmax','v max'],r:'La velocidad en el MAS: v(t) = ωA·cos(ωt + α) y v(x) = ±ω√(A²-x²). La velocidad máxima es v_max = ωA y se alcanza en x=0 (equilibrio). En los extremos v=0.'},
-          {k:['aceleracion','aceleración','a(t)','amax','a max'],r:'La aceleración en el MAS: a(t) = -ω²A·sin(ωt+α) y a(x) = -ω²x. La aceleración máxima es a_max = ω²A y ocurre en x=±A (extremos). En x=0, a=0. El signo negativo indica que siempre apunta al equilibrio.'},
-          {k:['energia','energía','cinetic','potencial'],r:'Energía cinética: Ec = ½mv² = ½mω²(A²-x²). Energía potencial: Ep = ½kx². Energía total: E = ½kA² = constante. En x=0 toda es cinética, en x=±A toda es potencial.'},
-          {k:['pendulo','péndulo'],r:'Un péndulo simple es una masa colgada de un hilo inextensible. Para ángulos pequeños (<15°) se comporta como MAS. T = 2π√(L/g). El período NO depende de la masa, solo de L y g.'},
-          {k:['resorte','muelle','spring','hooke'],r:'Un resorte ideal sigue la Ley de Hooke: F = -kx. El período de un sistema masa-resorte es T = 2π√(m/k). La frecuencia natural es f₀ = (1/2π)√(k/m). El período NO depende de la amplitud.'},
-          {k:['friccion','fricción','amortiguado','amortiguamiento'],r:'En el mundo real la fricción disipa energía. El movimiento amortiguado tiene una amplitud que decrece exponencialmente: x(t) = A₀·e^(-bt/2m)·cos(ω\'t+φ). Hay 3 regímenes: subamortiguado (oscila decayendo), críticamente amortiguado (vuelve rápido sin oscilar) y sobreamortiguado (vuelve lentamente).'},
-          {k:['mcu','circular uniforme','proyeccion','proyección'],r:'El MAS es la proyección de un Movimiento Circular Uniforme (MCU) sobre un eje diametral. Un punto girando con velocidad angular ω en un círculo de radio A proyecta un MAS sobre el eje x.'},
-          {k:['fase','alpha','alfa','desfase'],r:'La fase θ = ωt + α determina el estado del oscilador en cada instante. α es la fase inicial (en t=0). Si α=0 el movimiento empieza en x=0. Si α=π/2 empieza en x=A.'},
-          {k:['formula','fórmula','resumen','todas'],r:'Fórmulas principales: x=A·sin(ωt+α) | v=ωA·cos(ωt+α) | a=-ω²x | T_resorte=2π√(m/k) | T_péndulo=2π√(L/g) | v_max=ωA | a_max=ω²A | E=½kA² | F=-kx | ω=2π/T'},
-          {k:['ejemplo','ejercicio','problema'],r:'Ejemplo resuelto: Si A=0.2m y v_max=4m/s → ω=v_max/A=20 rad/s → T=2π/20≈0.314s → a_max=ω²A=80 m/s². Otro: Si A=10cm y a_max=40cm/s² → ω=√(40/10)=2 rad/s → T=π≈3.14s → v_max=20cm/s.'},
+          {k:['oscilat','vibratori','movimiento oscilatorio','que es oscil'],r:'El movimiento oscilatorio es aquel en que un cuerpo se desplaza a uno y otro lado de una posición de equilibrio. Ejemplos: péndulos, resortes, cuerdas de guitarra.'},
+          {k:['mas','m.a.s','armonico simple','armónico simple'],r:'El M.A.S. es un movimiento oscilatorio, periódico y de amplitud constante. x(t) = A·sin(ωt + α).'},
+          {k:['periodo','período'],r:'Período T = tiempo para una oscilación completa. T = 2π/ω. Resorte: T = 2π√(m/k). Péndulo: T = 2π√(L/g).'},
+          {k:['frecuencia','hertz','hz'],r:'Frecuencia f = 1/T = ω/(2π). Se mide en Hertz (Hz). 1 Hz = 1 ciclo/segundo.'},
+          {k:['velocidad','vmax'],r:'v(t) = ωA·cos(ωt+α). v(x) = ±ω√(A²-x²). v_max = ωA en x=0.'},
+          {k:['aceleracion','aceleración','amax'],r:'a(t) = -ω²A·sin(ωt+α). a(x) = -ω²x. a_max = ω²A en x=±A.'},
+          {k:['energia','energía'],r:'Ec = ½mv². Ep = ½kx². E_total = ½kA² = constante.'},
+          {k:['pendulo','péndulo'],r:'Péndulo simple: T = 2π√(L/g). NO depende de la masa. Para ángulos < 15°.'},
+          {k:['resorte','hooke'],r:'Ley de Hooke: F = -kx. T = 2π√(m/k). NO depende de la amplitud.'},
+          {k:['amortiguado','friccion','fricción'],r:'Mov. amortiguado: x(t) = A₀·e^(-bt/2m)·cos(ω\'t+φ). 3 regímenes.'},
+          {k:['formula','fórmula','resumen'],r:'x=Asin(ωt+α) | v=ωAcos(ωt+α) | a=-ω²x | T_res=2π√(m/k) | T_pend=2π√(L/g) | E=½kA²'},
+          {k:['ejemplo','ejercicio'],r:'Si A=0.2m, v_max=4m/s → ω=20rad/s → T≈0.314s → a_max=80m/s².'},
         ];
         function findAnswer(q){
             q=q.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
             let best=null,score=0;
-            for(let e of KB){
-                let s=0;
-                for(let k of e.k) if(q.includes(k.normalize('NFD').replace(/[\u0300-\u036f]/g,''))) s+=k.length;
-                if(s>score){score=s;best=e;}
-            }
-            return best?best.r:'No encontré información sobre eso en mi base de conocimientos. Intenta preguntar sobre: M.A.S., período, frecuencia, velocidad, aceleración, energía, péndulo, resorte, amortiguamiento o fórmulas. 🤔';
+            for(let e of KB){ let s=0; for(let k of e.k) if(q.includes(k.normalize('NFD').replace(/[\u0300-\u036f]/g,''))) s+=k.length; if(s>score){score=s;best=e;} }
+            return best?best.r:null;
+        }
+        function setSci(i){
+            currentSci=i;
+            let sci=SCIENTISTS[i];
+            document.querySelectorAll('.sci-card').forEach((b,j)=>b.classList.toggle('active',j===i));
+            document.getElementById('chat-name').textContent=sci.name;
+            document.getElementById('chat-face').textContent=sci.face;
+            document.getElementById('chat-btn-face').textContent=sci.face;
+            document.getElementById('chat-msgs').innerHTML='';
+            addMsg('bot', sci.greeting);
+            // Show API prompt if no key
+            let key=document.getElementById('api-key').value.trim();
+            if(!key) addMsg('bot','🔑 Para respuestas inteligentes con IA, ingresa tu API Key de Google Gemini en el campo de arriba.');
+            startQuoteRotation();
         }
         function toggleChat(){
             let w=document.getElementById('chatbot-window');
             w.style.display=w.style.display==='flex'?'none':'flex';
             if(w.style.display==='flex'&&document.getElementById('chat-msgs').children.length===0){
-                addMsg('bot','¡Guten Tag! 👋 Soy Heinrich Hertz, tu profesor asistente. Pregúntame sobre M.A.S., péndulos, energía, resortes o cualquier tema de oscilaciones. ¡Estoy aquí para ayudarte! ⚡');
+                addMsg('bot', SCIENTISTS[currentSci].greeting);
+                let key=document.getElementById('api-key').value.trim();
+                if(!key) addMsg('bot','🔑 Para usar la IA, ingresa tu API Key de Google Gemini en el campo de arriba. Puedes obtenerla gratis en aistudio.google.com');
             }
+            let key=document.getElementById('api-key').value.trim();
+            document.getElementById('api-status').textContent=key?'✅ Conectado':'offline';
+            document.getElementById('api-status').style.color=key?'#10b981':'#94a3b8';
         }
+        document.getElementById('api-key').addEventListener('input',function(){
+            let key=this.value.trim();
+            document.getElementById('api-status').textContent=key?'✅ Gemini conectado':'offline';
+            document.getElementById('api-status').style.color=key?'#10b981':'#52525b';
+        });
         function addMsg(type,text){
             let d=document.getElementById('chat-msgs');
             let m=document.createElement('div');
-            m.style.cssText=`padding:10px 14px;border-radius:12px;font-size:0.9rem;max-width:85%;word-wrap:break-word;line-height:1.5;${
-                type==='bot'?'background:#27272a;color:#e4e4e7;align-self:flex-start;border-bottom-left-radius:4px;'
-                :'background:#2563eb;color:white;align-self:flex-end;border-bottom-right-radius:4px;'}`;
+            m.style.cssText=`padding:10px 14px;border-radius:14px;font-size:0.85rem;max-width:85%;word-wrap:break-word;line-height:1.5;${
+                type==='bot'?'background:#f1f5f9;color:#334155;align-self:flex-start;border-bottom-left-radius:4px;'
+                :'background:linear-gradient(135deg,#6366f1,#8b5cf6);color:white;align-self:flex-end;border-bottom-right-radius:4px;'}`;
             m.textContent=text;d.appendChild(m);d.scrollTop=d.scrollHeight;
         }
-        function sendChat(){
+        async function sendChat(){
             let inp=document.getElementById('chat-input');
             let msg=inp.value.trim(); if(!msg)return;
             addMsg('user',msg); inp.value='';
-            setTimeout(()=>{ addMsg('bot',findAnswer(msg)); },300);
+            let apiKey=document.getElementById('api-key').value.trim();
+            if(apiKey){
+                // USE GEMINI 2.5 API
+                addMsg('bot','💭 Pensando...');
+                try{
+                    let sci=SCIENTISTS[currentSci];
+                    let sysPrompt=`${sci.system} Eres un experto en física, especialmente Movimiento Oscilatorio, M.A.S., péndulos, resortes y energía. Responde en español, claro y educativo. Máximo 150 palabras. Incluye fórmulas cuando sea relevante.`;
+                    let r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,{
+                        method:'POST',
+                        headers:{'Content-Type':'application/json'},
+                        body:JSON.stringify({
+                            system_instruction:{parts:[{text:sysPrompt}]},
+                            contents:[{parts:[{text:msg}]}]
+                        })
+                    });
+                    let data=await r.json();
+                    let msgs=document.getElementById('chat-msgs');
+                    msgs.removeChild(msgs.lastChild);
+                    if(data.candidates&&data.candidates[0]&&data.candidates[0].content){
+                        addMsg('bot',data.candidates[0].content.parts[0].text);
+                    } else if(data.error){
+                        addMsg('bot','⚠️ Error API: '+(data.error.message||'Verifica tu API key de Gemini'));
+                    } else {
+                        addMsg('bot','⚠️ No se obtuvo respuesta. Verifica tu API key.');
+                    }
+                }catch(e){
+                    let msgs=document.getElementById('chat-msgs');
+                    msgs.removeChild(msgs.lastChild);
+                    addMsg('bot','⚠️ Error de conexión. Verifica tu API key de Gemini y tu conexión a internet.');
+                }
+            } else {
+                let localAnswer = findAnswer(msg);
+                setTimeout(()=>{
+                    if(localAnswer){
+                        addMsg('bot', SCIENTISTS[currentSci].emoji+' '+localAnswer);
+                    } else {
+                        addMsg('bot','🔑 Para respuestas inteligentes, ingresa tu API Key de Google Gemini arriba. Sin API solo respondo sobre: M.A.S., período, frecuencia, velocidad, aceleración, energía, péndulo, resorte o fórmulas.');
+                    }
+                },300);
+            }
         }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <script>
+    (function(){
+        const canvas = document.getElementById('qr-code');
+        if(!canvas) return;
+        const ctx = canvas.getContext('2d');
+        const url = window.location.href;
+        const qr = qrcode(0, 'M');
+        qr.addData(url);
+        qr.make();
+        const count = qr.getModuleCount();
+        const cw = canvas.width, ch = canvas.height;
+        const cellSize = Math.floor(Math.min(cw, ch) / (count + 2));
+        const offset = Math.floor((cw - cellSize * count) / 2);
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, cw, ch);
+        ctx.fillStyle = '#1e293b';
+        for(let r = 0; r < count; r++){
+            for(let c = 0; c < count; c++){
+                if(qr.isDark(r, c)){
+                    ctx.fillRect(offset + c * cellSize, offset + r * cellSize, cellSize, cellSize);
+                }
+            }
+        }
+    })();
     </script>
 </body>
 </html>
